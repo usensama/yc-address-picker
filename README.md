@@ -9,8 +9,8 @@
    - Picker样式：滚轮式选择器，类似原生选择器
    - 仿淘宝样式：标签页式依次选取
 3. **数据来源**：从本地JSON文件获取可靠的省市区县数据
-   - 三级联动数据：pca-code.json
-   - 四级联动数据：pcas-code.json
+   - 三级联动数据：pca-code.js
+   - 四级联动数据：pcas-code.js
 4. **多端兼容**：基于uni-app开发，支持H5、小程序、App等多平台
 5. **自定义弹窗**：不依赖其他组件库，实现了自定义弹窗效果
 6. **动画效果**：从底部向上弹出的平滑动画
@@ -18,8 +18,7 @@
 
 ## 安装方法
 
-1. 将组件目录 `city-picker` 复制到你的项目的 `components` 目录中
-2. 确保 `pca-code.json` 和 `pcas-code.json` 文件存在于组件目录中
+本组件符合 easycom 规范，HBuilderX 2.5.5 起，只需将本组件导入项目，在页面 template 中即可直接使用，无需在页面中 import 和注册 components。
 
 ## 使用示例
 
@@ -31,7 +30,7 @@
     <view class="trigger-button" @click="showPicker = true">
       选择地区
     </view>
-    <city-picker 
+    <yc-address-picker 
       v-model="showPicker"
       :level="4"
       mode="picker"
@@ -41,12 +40,7 @@
 </template>
 
 <script>
-import cityPicker from '@/components/city-picker/city-picker.vue';
-
 export default {
-  components: {
-    cityPicker
-  },
   data() {
     return {
       showPicker: false
@@ -74,7 +68,7 @@ export default {
 ### 自定义按钮颜色和激活颜色
 
 ```vue
-<city-picker 
+<yc-address-picker 
   v-model="showPicker"
   :level="3"
   :mode="'taobao'"
@@ -121,10 +115,9 @@ export default {
 
 ## 注意事项
 
-1. **数据文件**：确保 `pca-code.json` 和 `pcas-code.json` 文件存在于组件目录中，这些文件包含了完整的省市区县数据
-2. **多端兼容**：组件使用了uni-app的跨平台能力，可在不同平台上正常运行
-3. **动画效果**：组件添加了从底部向上弹出的动画效果，提供更好的用户体验
-4. **淘宝模式高度**：淘宝模式的高度会根据屏幕高度自动调整，最高为屏幕高度的70%
+1. **多端兼容**：组件使用了uni-app的跨平台能力，可在不同平台上正常运行
+2. **动画效果**：组件添加了从底部向上弹出的动画效果，提供更好的用户体验
+3. **淘宝模式高度**：淘宝模式的高度会根据屏幕高度自动调整，最高为屏幕高度的70%
 
 ## 浏览器兼容性
 

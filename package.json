@@ -1,5 +1,5 @@
 {
-  "name": "city-picker",
+  "name": "yc-address-picker",
   "version": "1.0.0",
   "description": "省市区县四级联动选择器",
   "main": "main.js",
@@ -8,7 +8,7 @@
     "build:h5": "uni-app build h5",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["uni-app", "city-picker"],
+  "keywords": ["uni-app", "yc-address-picker"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

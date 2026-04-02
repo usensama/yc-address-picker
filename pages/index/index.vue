@@ -5,7 +5,7 @@
 
 			<view class="section">
 				<text class="section-title">Picker样式（省市区三级）</text>
-				<view class="trigger-button" @click="open1()">
+				<view class="trigger-button" @click="showPicker1 = true">
 					选择地区
 				</view>
 				<yc-address-picker v-model="showPicker1" :selected-value="modelValue1" :level="3" mode="picker"
@@ -57,14 +57,9 @@
 </template>
 
 <script>
-	import ycAddressPicker from '@/components/yc-address-picker/yc-address-picker.vue';
 	export default {
-		components: {
-			ycAddressPicker
-		},
 		data() {
 			return {
-				title: 'Hello',
 				result1: null,
 				result2: null,
 				result3: null,
@@ -83,10 +78,6 @@
 
 		},
 		methods: {
-			open1() {
-				this.showPicker1 = true
-				console.log('打开选择1:', this.showPicker1)
-			},
 			onConfirm1(result) {
 				this.result1 = result;
 				console.log('选择结果1:', result);

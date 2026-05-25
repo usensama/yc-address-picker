@@ -79,6 +79,18 @@ export default {
 />
 ```
 
+### 自定义热门城市
+
+```vue
+<yc-address-picker 
+  v-model="showPicker"
+  :level="3"
+  :mode="'taobao'"
+  :hot-cities="['北京', '上海', '广州', '深圳', '杭州', '成都', '武汉', '西安', '南京', '重庆']"
+  @confirm="onConfirm"
+/>
+```
+
 ## 参数说明
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -92,6 +104,7 @@ export default {
 | cancel-color | String | '#007aff' | 取消按钮颜色 |
 | confirm-color | String | '#007aff' | 确认按钮颜色 |
 | active-color | String | '#007aff' | taobao模式的选择字样激活颜色 |
+| hot-cities | Array | ['北京', '上海', '广州', '深圳', '杭州', '成都', '武汉', '西安'] | 淘宝模式下的热门城市数组 |
 
 ## 事件说明
 

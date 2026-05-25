@@ -1,7 +1,7 @@
 {
 	"id": "yc-address-picker",
 	"displayName": "yc-address-picker 地址选择器 省市区镇四级联动选择器",
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"description": "省市区区域四级联动选择器，可选择三级或四级使用，有两种模式可选择",
 	"keywords": [
         "address-picker",
@@ -58,7 +58,7 @@
 					},
 					"app": {
 						"vue": "√",
-						"nvue": "√",
+						"nvue": "x",
 						"android": "√",
 						"ios": "√",
 						"harmony": "-"

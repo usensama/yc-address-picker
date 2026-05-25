@@ -46,7 +46,7 @@
 					选择地区
 				</view>
 				<yc-address-picker v-model="showPicker4" :selected-value="modelValue4" :level="4" mode="taobao"
-					title="选择地区" :disabled="false" @confirm="onConfirm4" />
+					title="选择地区" :hotCities="hotCities" :disabled="false" @confirm="onConfirm4" />
 				<view class="result" v-if="result4">
 					<text>选择结果：{{ result4.province.name }} {{ result4.city.name }} {{ result4.district.name }}
 						{{ result4.town.name }}</text>
@@ -71,7 +71,8 @@
 				modelValue1: {},
 				modelValue2: {},
 				modelValue3: {},
-				modelValue4: {}
+				modelValue4: {city:'唐山市',district:'路北区',province:'河北省',town:'乔屯街道'},
+				hotCities:['北京', '上海', '深圳', '广州', '杭州', '成都', '武汉', '重庆']
 			}
 		},
 		onLoad() {
